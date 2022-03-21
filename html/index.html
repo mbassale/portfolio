@@ -76,7 +76,7 @@
             <!-- Portfolio Grid Items-->
             <div class="row justify-content-center">
                 <!-- Portfolio Item 1-->
-                <div class="col-md-6 col-lg-4 mb-5">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
                         <div class="card">
                             <div class="card-body" style="min-height: 10rem;">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <!-- Portfolio Item 2-->
-                <div class="col-md-6 col-lg-4 mb-5">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
                         <div class="card">
                             <div class="card-body" style="min-height: 10rem;">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <!-- Portfolio Item 3-->
-                <div class="col-md-6 col-lg-4 mb-5">
+                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
                         <div class="card">
                             <div class="card-body" style="min-height: 10rem;">
@@ -110,6 +110,22 @@
                                     Computer Science stuff, algorithms and code samples.
                                 </h6>
                                 <p class="card-text">Written in C, C++, Go, Java, Python, JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-6 col-lg-4 mb-3">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                        <div class="card">
+                            <div class="card-body" style="min-height: 10rem;">
+                                <h2 class="card-title">CppLox Language</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    Hobby interpreted dynamic typing language with a bytecode virtual machine
+                                </h6>
+                                <p class="card-text">Written in C++</p>
                             </div>
                         </div>
                     </div>
@@ -411,21 +427,46 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <!-- Portfolio Modal - Title-->
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+                                    CppLox Language
+                                </h2>
                                 <!-- Icon Divider-->
                                 <div class="divider-custom">
                                     <div class="divider-custom-line"></div>
                                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                     <div class="divider-custom-line"></div>
                                 </div>
-                                <!-- Portfolio Modal - Image-->
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
                                 <!-- Portfolio Modal - Text-->
-                                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque
-                                    assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam
-                                    velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
-                                </p>
-                                <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
+                                <dl class="row">
+                                    <dt class="col-sm-3 text-start">
+                                        Name
+                                    </dt>
+                                    <dd class="col-sm-9 text-start">
+                                        CppLox
+                                    </dd>
+                                    <dt class="col-sm-3 text-start">
+                                        Description
+                                    </dt>
+                                    <dd class="col-sm-9 text-start">
+                                        A hobby dynamic typing interpreted language based on the Lox language with my
+                                        own additions.
+                                        Currently, has a bytecode-based virtual machine with the typical switch-case
+                                        dispatch method.
+                                        I plan to add LLVM Jit Support after the bytecode implementation is complete.
+                                    </dd>
+                                    <dt class="col-sm-3 text-start">
+                                        Languages &amp; Tools
+                                    </dt>
+                                    <dd class="col-sm-9 text-start">
+                                        C++
+                                    </dd>
+                                    <dt class="col-sm-3 text-start">Github Repository</dt>
+                                    <dd class="col-sm-9 text-start">
+                                        <a
+                                            href="https://github.com/mbassale/cpplox">https://github.com/mbassale/cpplox</a>
+                                    </dd>
+                                </dl>
+                                <button class="btn btn-primary" type="button" data-bs-dismiss="modal">
                                     <i class="fas fa-times fa-fw"></i>
                                     Close Window
                                 </button>

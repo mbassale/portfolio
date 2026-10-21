@@ -42,11 +42,6 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/mbassale/portfolio/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/mbassale/portfolio/edit/main/',
-        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -72,7 +67,6 @@ const config = {
             position: 'left',
             label: 'Resume',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/mbassale',
             label: 'GitHub',
@@ -107,15 +101,6 @@ const config = {
               {
                 label: 'LinkedIn',
                 href: 'https://www.linkedin.com/in/marcobassaletti/?locale=en_US',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
               },
             ],
           },

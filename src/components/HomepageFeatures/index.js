@@ -4,32 +4,118 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Senior Software Engineer',
+    Svg: require('@site/static/img/knight.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        <p />
+        <p>
+          Extensive experience generating value for Startups, Government
+          Organizations and Big Tech Companies.
+        </p>
+        <p>I can work on high-intensity environments with lots of ambiguity.</p>
+        <p>
+          High-productivity (
+          <a
+            href="https://github.com/mbassale?tab=overview&from=2019-12-01&to=2019-12-31"
+            target="_blank">
+            2200+ Commits in 2019
+          </a>
+          )
+        </p>
+        <p>
+          I'm able to code, troubleshoot issues, design solutions and mentor
+          engineers.
+        </p>
+        <p>
+          Experience ramping up, stabilizing, refactoring and adding value to
+          undocumented legacy systems.
+        </p>
+        <p />
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '15 Years of Experience',
+    Svg: require('@site/static/img/writing1.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        <p />
+        <p>
+          I have experience on Frontend, Backend, Compilers, Interpreters, OCR
+          & ML and Systems Administration.
+        </p>
+        <ul style={{textAlign: 'left'}}>
+          <li>
+            Compiler/Interpreter Engineering:{' '}
+            <a href="https://github.com/mbassale/cpplox" target="_blank">
+              cpplox
+            </a>
+            ,{' '}
+            <a href="https://github.com/mbassale/glox" target="_blank">
+              glox
+            </a>
+            ,{' '}
+            <a href="https://github.com/mbassale/computer-science" target="_blank">
+              CompSci
+            </a>
+            .
+          </li>
+          <li>
+            Backend: C++ with Boost, Folly, Thrift, Protocol Buffers; Java EJB,
+            Spring; C# ASP.NET MVC Framework.
+          </li>
+          <li>
+            OCR & ML:{' '}
+            <a href="https://www.abbyy.com/finereader-server/" target="_blank">
+              ABBYY FineReader Server
+            </a>
+            , Jupyter, numpy, scikit-learn.
+          </li>
+          <li>Web UI: React.js, Vue.js, jQuery.</li>
+          <li>Mobile UI: React Native.</li>
+          <li>
+            Desktop UI:{' '}
+            <a
+              href="https://learn.microsoft.com/en-us/cpp/mfc/mfc-desktop-applications?view=msvc-170"
+              target="_blank">
+              Microsoft MFC
+            </a>
+            ,{' '}
+            <a href="https://www.wxwidgets.org/" target="_blank">
+              wxWidgets
+            </a>
+            ,{' '}
+            <a href="https://www.fltk.org/" target="_blank">
+              FLTK
+            </a>
+            ,{' '}
+            <a href="https://en.wikipedia.org/wiki/Swing_(Java)" target="_blank">
+              Java AWT/Swing
+            </a>
+          </li>
+        </ul>
+        <p />
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Backend Engineer @ Meta',
+    Svg: require('@site/static/img/castle-gate.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        <p />
+        <p>Currently working as Systems Engineer on Meta FinTech Division.</p>
+        <p>
+          Experience working on Merchant on Record and Third Party Payment
+          Processors integration.
+        </p>
+        <p>
+          Experience with automated build systems, oncall, devops, linux server
+          administration.
+        </p>
+        <p>Experience working with critical systems with live traffic.</p>
+        <p />
       </>
     ),
   },
@@ -43,7 +129,7 @@ function Feature({Svg, title, description}) {
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
-        <p>{description}</p>
+        {description}
       </div>
     </div>
   );

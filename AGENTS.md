@@ -5,7 +5,7 @@ Guidance for AI coding agents working in this repository.
 ## Project Overview
 
 Personal portfolio site of **Marco Bassaletti** (Senior Software Engineer), built with
-[Docusaurus](https://docusaurus.io) **v2.3.1** (classic preset, React 17, JavaScript — not TypeScript).
+[Docusaurus](https://docusaurus.io) **v3.10.2** (classic preset, React 18, JavaScript — not TypeScript).
 
 - **Live site:** <https://mbassale.dev>
 - **Hosting:** Cloudflare (proxied DNS) → droplet `137.184.116.147` (nginx), docroot
@@ -17,7 +17,7 @@ Personal portfolio site of **Marco Bassaletti** (Senior Software Engineer), buil
 ## Commands
 
 ```bash
-npm install        # install dependencies (Node >= 16.14)
+npm install        # install dependencies (Node >= 20)
 npm start          # dev server with hot reload (http://localhost:3000)
 npm run build      # production build into ./build (fails on broken links)
 npm run serve      # serve the production build locally
@@ -39,7 +39,8 @@ internal link or missing referenced asset **fails the build**.
 | `src/css/custom.css` | Global CSS / Infima theme overrides |
 | `static/` | Copied verbatim to the site root (`img/` holds favicon, logo, feature art, social card) |
 
-There is intentionally **no blog** — the blog plugin is not enabled in `docusaurus.config.js`.
+There is intentionally **no blog** — the blog plugin is disabled (`blog: false` in
+`docusaurus.config.js`; in the classic preset, omitting the key would enable it).
 
 ## Content Conventions
 
@@ -89,7 +90,8 @@ rsync -av --delete build/ mbassale@137.184.116.147:/var/www/mbassale.dev/html/
 
 ## Notes for Agents
 
-- Keep the dependency set minimal; Docusaurus 2.3.1 is intentionally pinned (see `package.json`).
+- Keep the dependency set minimal; Docusaurus 3.10.2 is intentionally pinned (see `package.json`)
+  along with React 18 and prism-react-renderer v2 — upgrade deliberately, as a unit.
 - Do not edit files under `build/` (generated) or touch `package-lock.json` casually.
 - MDX is active for `.md` files in `docs/`: `{` and `<` in prose must be escaped
   (`\{`, `\<`) or wrapped in code spans, or the build will fail.

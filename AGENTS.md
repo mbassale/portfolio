@@ -51,7 +51,7 @@ There is intentionally **no blog** — the blog plugin is not enabled in `docusa
 - Sidebar ordering uses `sidebar_position` frontmatter; page meta description uses the
   `description` frontmatter field.
 - Admonitions use Docusaurus 2.x syntax with the title after the type, e.g.
-  `:::warning Coming Soon!` (note: `warning` is a legacy alias of `danger` here — it renders
+  `:::warning Title here` (note: `warning` is a legacy alias of `danger` here — it renders
   `alert--danger` styling).
 
 ### Pages & components
@@ -70,6 +70,7 @@ There is intentionally **no blog** — the blog plugin is not enabled in `docusa
   "Commits on 2019" → "Commits in 2019").
 - `static/img/docusaurus-social-card.jpg` — 1200×630 social/OG card, referenced by
   `themeConfig.image`. Keep that aspect ratio if regenerating.
+- `static/MarcoBassalettiResumeEN.pdf` — downloadable resume, linked from `docs/resume.md`.
 - `static/img/logo.svg` — navbar logo; `static/img/favicon.ico` — site favicon.
 - `static/.nojekyll` — harmless legacy from the original GitHub Pages workflow; keep.
 

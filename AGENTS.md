@@ -8,11 +8,16 @@ Personal portfolio site of **Marco Bassaletti** (Senior Software Engineer), buil
 [Docusaurus](https://docusaurus.io) **v3.10.2** (classic preset, React 18, JavaScript — not TypeScript).
 
 - **Live site:** <https://mbassale.dev>
-- **Hosting:** Cloudflare (proxied DNS) → droplet `137.184.116.147` (nginx), docroot
-  `/var/www/mbassale.dev/html`
-- **Deployment:** the production build (`build/`) is uploaded to the droplet docroot (see
+- **Hosting:** Cloudflare (proxied DNS) → droplet `159.223.194.78` ("aicloud", Ubuntu 24.04, nginx
+  1.24), web root `/var/www/mbassale.dev`. The same droplet hosts **isidorus.ai** and the
+  **bassaletti.com** AICloud Rust API (localhost:8080) — their nginx files
+  (`isidorus.ai`, `isidorus.ai-ssl`, `aicloud`, `aicloud-ssl`) are off-limits.
+- **TLS:** Cloudflare Origin CA certificates (installed at `/etc/nginx/ssl/`, zone SSL mode
+  Full strict). They expire **October 2041** and do not auto-renew — re-create in the
+  Cloudflare dashboard (SSL/TLS → Origin Server) and reinstall before then.
+- **Deployment:** the production build (`build/`) is rsynced to the droplet web root (see
   Deployment). `main` is the source of truth; the live site only changes when a build is
-  deployed. Not GitHub Pages.
+  deployed.
 
 ## Commands
 
@@ -79,14 +84,16 @@ There is intentionally **no blog** — the blog plugin is disabled (`blog: false
 
 ```
 npm run build
-rsync -av --delete build/ mbassale@137.184.116.147:/var/www/mbassale.dev/html/
+rsync -av --delete build/ mbassale@159.223.194.78:/var/www/mbassale.dev/
 ```
 
 - `--delete` removes files removed from the site (e.g. retired pages) — drop it only if stale
   pages should stay live.
-- DNS for `mbassale.dev` is proxied through Cloudflare to the droplet; nginx serves the docroot.
-  There is no CI — deployment is a manual rsync.
-- After deploying, verify: homepage bundle hash changed, removed routes return the 404 page.
+- DNS for `mbassale.dev` is proxied through Cloudflare (Full strict) to the droplet; nginx
+  serves the web root over HTTPS via a Cloudflare Origin CA certificate. There is no CI —
+  deployment is a manual rsync.
+- After deploying, verify: homepage bundle hash changed, removed routes return the 404 page
+  (`https://mbassale.dev/blog/` must stay 404).
 
 ## Notes for Agents
 
